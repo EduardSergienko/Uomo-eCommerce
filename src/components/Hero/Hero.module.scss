@@ -1,0 +1,23 @@
+.hero {
+  width: 1900px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.socialBox {
+  width: 24px;
+  height: 200px;
+  background-color: aqua;
+  align-self: center;
+}
+.mainHeroContent {
+  width: 1800px;
+  height: 800px;
+  border: 2px solid #f5e6e0;
+}
+.sideText {
+  width: 24px;
+  height: 150px;
+  background-color: aquamarine;
+  align-self: flex-end;
+}

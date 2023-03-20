@@ -1,16 +1,14 @@
+import Layout from './Layout/Layout';
+import { Routes, Route } from 'react-router-dom';
+import Home from 'Pages/Home';
+import Shop from 'Pages/Shop';
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      React template.
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+      </Route>
+    </Routes>
   );
 };

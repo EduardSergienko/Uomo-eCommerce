@@ -1,0 +1,57 @@
+@import '/src/scssUtils/animations.scss';
+.header {
+  padding: 29px 0 19px 0;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // left: 0;
+  // background-color: white;
+}
+.navWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.siteNav {
+  display: flex;
+  align-items: flex-end;
+}
+.siteNavList {
+  display: flex;
+  margin-left: 55px;
+}
+.siteNavLink {
+  margin-right: 40px;
+  color: black;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.active {
+  margin-right: 40px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: black;
+    margin-top: 2px;
+    animation-name: slideInLeft;
+    animation-duration: 250ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+  }
+}
+.userMenu {
+  display: flex;
+}
+.userMenuItem {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
