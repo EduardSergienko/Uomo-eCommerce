@@ -1,0 +1,28 @@
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-horizontal.swiper-pagination-bullets {
+  .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+  }
+  &.swiper-pagination-bullets-dynamic {
+    left: 75px;
+    white-space: nowrap;
+    bottom: 5%;
+
+    @media screen and (min-width: 1410px) {
+      left: 0;
+      transform: rotate(90deg);
+      white-space: nowrap;
+      bottom: 50%;
+      .swiper-pagination-bullet {
+        transition: 200ms transform, 200ms left;
+      }
+    }
+  }
+}
+.swiper-pagination-bullet-active {
+  background: black;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}

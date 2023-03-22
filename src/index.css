@@ -12,11 +12,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-p {
+p,
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
-
+p {
+  font-weight: 500;
+}
 ul {
   padding: 0;
   margin: 0;
@@ -28,4 +32,8 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+  font-weight: 500;
+}
+.swiper-pagination {
+  display: block;
 }

@@ -1,23 +1,113 @@
 .hero {
-  width: 1900px;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-around;
+  @media screen and (min-width: 1410px) {
+    max-width: 1900px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+  }
 }
-.socialBox {
-  width: 24px;
-  height: 200px;
-  background-color: aqua;
-  align-self: center;
-}
+
 .mainHeroContent {
-  width: 1800px;
-  height: 800px;
-  border: 2px solid #f5e6e0;
+  @media screen and (min-width: 1410px) {
+    max-width: 1800px;
+    padding: 5px;
+    border: 2px solid #f5e6e0;
+  }
 }
 .sideText {
-  width: 24px;
-  height: 150px;
-  background-color: aquamarine;
+  @media screen and (max-width: 1409px) {
+    display: none;
+  }
   align-self: flex-end;
+  & p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    &::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 30px;
+      background-color: black;
+      margin-bottom: 10px;
+    }
+  }
+}
+.slide {
+  position: relative;
+  background-image: url('../../img/slide_bg_mob.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 1410px) {
+    background-image: url('../../img/slide_bg.jpg');
+    justify-content: space-evenly;
+    padding-top: 47px;
+  }
+}
+.slideWrap {
+  display: flex;
+  align-items: center;
+}
+.slideTexContent {
+  width: 270px;
+  position: absolute;
+  left: 15px;
+  z-index: 10;
+  cursor: default;
+  @media screen and (min-width: 1410px) {
+    width: 780px;
+    position: unset;
+  }
+  & p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #c32929;
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+    &::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: #c32929;
+      margin-right: 13px;
+    }
+  }
+  & h2 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 8px;
+    @media screen and (min-width: 1410px) {
+      font-size: 70px;
+      line-height: 80px;
+    }
+  }
+  & span {
+    font-weight: 700;
+  }
+  & a {
+    &::after {
+      content: '';
+      display: block;
+      width: 95px;
+      height: 2px;
+      background-color: black;
+    }
+  }
+}
+.slideImg {
+  margin-left: auto;
+  @media screen and (min-width: 1410px) {
+    transform: translateX(-110px);
+    margin-left: 0;
+  }
 }

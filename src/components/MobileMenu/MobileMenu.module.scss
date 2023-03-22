@@ -1,0 +1,46 @@
+.mobileMenuWrap {
+  padding: 20px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 45px);
+  background-color: white;
+  z-index: 10;
+}
+.mobileMenuForm {
+  position: relative;
+}
+.mobileMenuInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+  border-radius: 7px;
+  margin-bottom: 17px;
+  &:focus {
+    outline: 1px solid #e4e4e4;
+  }
+}
+.mobileMenuSerchBtn {
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 3%;
+  top: 13%;
+}
+.bottomNav {
+  padding-top: 30px;
+  border-top: 1px solid black;
+}
+.mobileAccLink {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  & p {
+    margin-left: 10px;
+  }
+}

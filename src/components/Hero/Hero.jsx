@@ -1,11 +1,164 @@
+import { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+  EffectCreative,
+} from 'swiper';
+import 'swiper/css';
+import 'swiper/scss/pagination';
+import { Link } from 'react-router-dom';
 import styles from './Hero.module.scss';
-
+import SliderImg from '../../img/slide_img.jpg';
+import SliderImgMob from '../../img/slide_img_mob.jpg';
+import SocialLinks from 'components/SocialLinks/SocialLinks';
 export default function Hero() {
+  const [width, setWidth] = useState(window.innerWidth);
+  // const mobileWidth = width < 768;
+  const desktopWidth = width > 1409;
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+  }, []);
   return (
     <section className={styles.hero}>
-      <div className={styles.socialBox}></div>
-      <div className={styles.mainHeroContent}></div>
-      <div className={styles.sideText}></div>
+      {desktopWidth && <SocialLinks />}
+      <div className={styles.mainHeroContent}>
+        <Swiper
+          modules={[
+            Navigation,
+            Pagination,
+            Scrollbar,
+            A11y,
+            Autoplay,
+            EffectCreative,
+          ]}
+          spaceBetween={10}
+          pagination={{
+            dynamicBullets: true,
+            clickable: true,
+          }}
+          // autoplay={{ pauseOnMouseEnter: true, disableOnInteraction: false }}
+          loop={true}
+          speed={500}
+          effect={'creative'}
+          creativeEffect={{
+            prev: {
+              shadow: true,
+              translate: ['-110%', 0, -300],
+            },
+            next: {
+              shadow: true,
+              translate: ['110%', 0, -300],
+            },
+          }}
+        >
+          <SwiperSlide className={styles.slide}>
+            <div className={styles.slideTexContent}>
+              <p>NEW TREND</p>
+              <h2>
+                SUMMER SALE STYLISH <span>WOMENS</span>
+              </h2>
+              <Link>DISCOVER MORE</Link>
+            </div>
+            <div className={styles.slideImg}>
+              <picture>
+                <source
+                  type="image/jpeg"
+                  media="(min-width: 1410px)"
+                  srcSet={SliderImg}
+                />
+                <source
+                  type="image/jpeg"
+                  media="(max-width: 1409px)"
+                  srcSet={SliderImgMob}
+                />
+                <img src={SliderImg} alt="" />
+              </picture>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <div className={styles.slideTexContent}>
+              <p>NEW TREND</p>
+              <h2>
+                SUMMER SALE STYLISH <span>MENS</span>
+              </h2>
+              <Link>DISCOVER MORE</Link>
+            </div>
+            <div className={styles.slideImg}>
+              <picture>
+                <source
+                  type="image/jpeg"
+                  media="(min-width: 1410px)"
+                  srcSet={SliderImg}
+                />
+                <source
+                  type="image/jpeg"
+                  media="(max-width: 1409px)"
+                  srcSet={SliderImgMob}
+                />
+                <img src={SliderImg} alt="" />
+              </picture>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <div className={styles.slideTexContent}>
+              <p>NEW TREND</p>
+              <h2>
+                SUMMER SALE STYLISH <span>KIDS</span>
+              </h2>
+              <Link>DISCOVER MORE</Link>
+            </div>
+            <div className={styles.slideImg}>
+              <picture>
+                <source
+                  type="image/jpeg"
+                  media="(min-width: 1410px)"
+                  srcSet={SliderImg}
+                />
+                <source
+                  type="image/jpeg"
+                  media="(max-width: 1409px)"
+                  srcSet={SliderImgMob}
+                />
+                <img src={SliderImg} alt="" />
+              </picture>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slide}>
+            <div className={styles.slideTexContent}>
+              <p>NEW TREND</p>
+              <h2>
+                SUMMER SALE STYLISH <span>VODISLOVE</span>
+              </h2>
+              <Link>DISCOVER MORE</Link>
+            </div>
+            <div className={styles.slideImg}>
+              <picture>
+                <source
+                  type="image/jpeg"
+                  media="(min-width: 1410px)"
+                  srcSet={SliderImg}
+                />
+                <source
+                  type="image/jpeg"
+                  media="(max-width: 1409px)"
+                  srcSet={SliderImgMob}
+                />
+                <img src={SliderImg} alt="" />
+              </picture>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <div className={styles.sideText}>
+        <p>SCROLL</p>
+      </div>
     </section>
   );
 }

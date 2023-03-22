@@ -1,5 +1,5 @@
 import Container from '../Container/Container';
-import { NavLink } from 'react-router-dom';
+import SiteNav from 'components/SiteNav/SiteNav';
 import styles from './Header.module.scss';
 import logo from '../../img/logo.png';
 import { BsSearch } from 'react-icons/bs';
@@ -12,59 +12,8 @@ export default function Header() {
     <header className={styles.header}>
       <Container>
         <div className={styles.navWrap}>
-          <nav className={styles.siteNav}>
-            <img src={logo} alt="logo" />
-            <ul className={styles.siteNavList}>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? styles.active : styles.siteNavLink
-                }
-                to="/"
-              >
-                HOME
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? styles.active : styles.siteNavLink
-                }
-                to="/shop"
-              >
-                SHOP
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? styles.active : styles.siteNavLink
-                }
-                to="/collection"
-              >
-                COLLECTION
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? styles.active : styles.siteNavLink
-                }
-                to="/journal"
-              >
-                JOURNAL
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? styles.active : styles.siteNavLink
-                }
-                to="/lookbook"
-              >
-                LOOKBOOK
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? styles.active : styles.siteNavLink
-                }
-                to="/pages"
-              >
-                PAGES
-              </NavLink>
-            </ul>
-          </nav>
+          <img src={logo} alt="logo" />
+          <SiteNav />
           <ul className={styles.userMenu}>
             <li className={styles.userMenuItem}>
               <BsSearch size={20} />

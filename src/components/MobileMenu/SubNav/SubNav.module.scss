@@ -1,0 +1,18 @@
+.subNavLinks {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  & a {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 35px;
+    font-weight: 400;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.boBackLink {
+  display: flex;
+  align-items: center;
+}

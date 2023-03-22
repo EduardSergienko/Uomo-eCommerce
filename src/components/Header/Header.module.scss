@@ -12,40 +12,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.siteNav {
-  display: flex;
-  align-items: flex-end;
-}
-.siteNavList {
-  display: flex;
-  margin-left: 55px;
-}
-.siteNavLink {
-  margin-right: 40px;
-  color: black;
 
-  &:last-child {
-    margin-right: 0;
-  }
-}
-.active {
-  margin-right: 40px;
-  &:last-child {
-    margin-right: 0;
-  }
-  &::after {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 2px;
-    background-color: black;
-    margin-top: 2px;
-    animation-name: slideInLeft;
-    animation-duration: 250ms;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-  }
-}
 .userMenu {
   display: flex;
 }
