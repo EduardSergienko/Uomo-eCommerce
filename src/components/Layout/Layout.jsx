@@ -1,21 +1,12 @@
 import Header from '../Header/Header';
 import MobileHeader from 'components/MobileHeader/MobileHeader';
 import { Outlet } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useMediaQuery } from '@mui/material';
 export default function Layout() {
-  const [width, setWidth] = useState(window.innerWidth);
-  // const mobileWidth = width < 768;
-  const desktopWidth = width > 1409;
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-  }, []);
+  const mobileWidth = useMediaQuery('(max-width:1409px)');
   return (
     <>
-      {desktopWidth ? <Header /> : <MobileHeader />}
-
+      {!mobileWidth ? <Header /> : <MobileHeader />}
       <Outlet />
     </>
   );

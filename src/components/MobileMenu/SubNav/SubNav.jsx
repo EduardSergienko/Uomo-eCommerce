@@ -6,7 +6,7 @@ export default function SubNav({ subNavToggle }) {
     <div>
       <Link className={styles.boBackLink} onClick={subNavToggle}>
         <MdOutlineKeyboardArrowLeft />
-        PAGES{' '}
+        PAGES
       </Link>
       <ul className={styles.subNavLinks}>
         <Link>About</Link>

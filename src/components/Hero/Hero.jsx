@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useMediaQuery } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
   Navigation,
@@ -16,15 +16,8 @@ import SliderImg from '../../img/slide_img.jpg';
 import SliderImgMob from '../../img/slide_img_mob.jpg';
 import SocialLinks from 'components/SocialLinks/SocialLinks';
 export default function Hero() {
-  const [width, setWidth] = useState(window.innerWidth);
-  // const mobileWidth = width < 768;
-  const desktopWidth = width > 1409;
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-  }, []);
+  const desktopWidth = useMediaQuery('(min-width:1410px)');
+
   return (
     <section className={styles.hero}>
       {desktopWidth && <SocialLinks />}
