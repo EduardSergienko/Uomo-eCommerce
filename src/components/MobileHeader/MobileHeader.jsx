@@ -13,21 +13,23 @@ export default function MobileHeader() {
   };
 
   return (
-    <header className={styles.header}>
-      <Container>
-        <div className={styles.headerWrap}>
-          <button
-            onClick={toggleMenu}
-            type="button"
-            className={styles.openMenubtn}
-          >
-            {isMenuOpen ? <CgClose size={25} /> : <RiMenu2Fill size={25} />}
-          </button>
-          <img src={Logo} alt="" />
-          <TfiBag size={25} />
-        </div>
-      </Container>
+    <>
+      <header className={styles.header}>
+        <Container>
+          <div className={styles.headerWrap}>
+            <button
+              onClick={toggleMenu}
+              type="button"
+              className={styles.openMenubtn}
+            >
+              {isMenuOpen ? <CgClose size={25} /> : <RiMenu2Fill size={25} />}
+            </button>
+            <img src={Logo} alt="" />
+            <TfiBag size={25} />
+          </div>
+        </Container>
+      </header>
       {isMenuOpen && <MobileMenu toggleMenu={toggleMenu} />}
-    </header>
+    </>
   );
 }

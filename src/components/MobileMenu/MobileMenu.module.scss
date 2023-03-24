@@ -34,7 +34,7 @@
 }
 .bottomNav {
   padding-top: 30px;
-  border-top: 1px solid black;
+  border-top: 1px solid #e4e4e4;
 }
 .mobileAccLink {
   display: flex;
@@ -43,4 +43,7 @@
   & p {
     margin-left: 10px;
   }
+}
+.hiddenSiteNav {
+  display: none;
 }

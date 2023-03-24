@@ -1,0 +1,11 @@
+.menCategoriesList {
+  padding: 15px 0;
+}
+
+.categoryLink {
+  display: block;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

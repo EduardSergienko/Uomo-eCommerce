@@ -10,12 +10,12 @@ export default function SiteNav({ subNavToggle, menuToggle }) {
       <ul className={styles.siteNavList}>
         <NavLink onClick={menuToggle} className={isActive} to="/">
           HOME
-          <MdOutlineKeyboardArrowRight
-            className={styles.siteNavLinkSvg}
-            size={20}
-          />
         </NavLink>
-        <NavLink className={isActive} to="/shop">
+        <NavLink
+          onClick={() => subNavToggle('shop')}
+          className={isActive}
+          to="/shop"
+        >
           SHOP
           <MdOutlineKeyboardArrowRight
             className={styles.siteNavLinkSvg}
@@ -24,26 +24,17 @@ export default function SiteNav({ subNavToggle, menuToggle }) {
         </NavLink>
         <NavLink className={isActive} to="/collection">
           COLLECTION
-          <MdOutlineKeyboardArrowRight
-            className={styles.siteNavLinkSvg}
-            size={20}
-          />
         </NavLink>
         <NavLink className={isActive} to="/journal">
           JOURNAL
-          <MdOutlineKeyboardArrowRight
-            className={styles.siteNavLinkSvg}
-            size={20}
-          />
         </NavLink>
         <NavLink className={isActive} to="/lookbook">
           LOOKBOOK
-          <MdOutlineKeyboardArrowRight
-            className={styles.siteNavLinkSvg}
-            size={20}
-          />
         </NavLink>
-        <Link onClick={subNavToggle} className={styles.siteNavLink}>
+        <Link
+          onClick={() => subNavToggle('pages')}
+          className={styles.siteNavLink}
+        >
           PAGES
           <MdOutlineKeyboardArrowRight
             className={styles.siteNavLinkSvg}

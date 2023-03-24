@@ -4,7 +4,10 @@ import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 export default function SubNav({ subNavToggle }) {
   return (
     <div>
-      <Link className={styles.boBackLink} onClick={subNavToggle}>
+      <Link
+        className={styles.boBackLink}
+        onClick={() => subNavToggle('navigation')}
+      >
         <MdOutlineKeyboardArrowLeft />
         PAGES
       </Link>
