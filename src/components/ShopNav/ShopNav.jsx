@@ -1,8 +1,12 @@
-import WomenCategories from './WomenCategories/WomenCategories';
-import MenCategories from './MenCategories/MenCategories';
+import CategoriesList from './CategoriesList/CategoriesList';
 import styles from './ShopNav.module.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import {
+  womenCategories,
+  menCategories,
+  kidsCategories,
+} from 'data/shopCategories';
 export default function ShopNav({ menuToggle }) {
   const [currentCategory, setCurrentCategory] = useState('women');
 
@@ -36,8 +40,9 @@ export default function ShopNav({ menuToggle }) {
           KIDS
         </Link>
       </div>
-      {currentCategory === 'women' && <WomenCategories />}
-      {currentCategory === 'men' && <MenCategories />}
+      {currentCategory === 'women' && <CategoriesList data={womenCategories} />}
+      {currentCategory === 'men' && <CategoriesList data={menCategories} />}
+      {currentCategory === 'kids' && <CategoriesList data={kidsCategories} />}
       <div className={styles.goBackLink}>
         <Link onClick={menuToggle} to="/">
           HOME
