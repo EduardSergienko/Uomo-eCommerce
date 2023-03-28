@@ -6,10 +6,13 @@ import { RiMenu2Fill } from 'react-icons/ri';
 import { TfiBag } from 'react-icons/tfi';
 import { CgClose } from 'react-icons/cg';
 import { useState } from 'react';
+import { useMainContext } from 'components/Context/context';
 export default function MobileHeader() {
+  const { handleActiveMenuChange } = useMainContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    handleActiveMenuChange('navigation');
   };
 
   return (

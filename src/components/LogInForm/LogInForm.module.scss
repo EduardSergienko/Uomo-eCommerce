@@ -9,7 +9,16 @@
     line-height: 23px;
   }
 }
-
+.closeBtn {
+  @media screen and (max-width: 1409px) {
+    display: none;
+  }
+}
+.goBackBtn {
+  @media screen and (min-width: 1410px) {
+    display: none;
+  }
+}
 .logInBtn {
   border: none;
   background-color: black;

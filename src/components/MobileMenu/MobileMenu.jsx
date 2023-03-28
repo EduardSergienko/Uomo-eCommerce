@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMainContext } from 'components/Context/context';
 import Container from 'components/Container/Container';
 import SubNav from './SubNav/SubNav';
 import SiteNav from 'components/SiteNav/SiteNav';
@@ -12,12 +12,8 @@ import ShopNav from '../ShopNav/ShopNav';
 import SideBarMenu from 'components/SideBarMenu/SideBarMenu';
 
 export default function MobileMenu({ toggleMenu }) {
-  const [activeMenu, setActiveMenu] = useState('navigation');
-  const [isLogedIn, setIsLogedIn] = useState(false);
-  console.log(setIsLogedIn);
-  function handleActiveMenuChange(menu) {
-    setActiveMenu(menu);
-  }
+  const { activeMenu, isLogedIn, handleActiveMenuChange } = useMainContext();
+  console.log(activeMenu);
 
   return (
     <div className={styles.mobileMenuWrap}>
@@ -66,7 +62,7 @@ export default function MobileMenu({ toggleMenu }) {
             {!isLogedIn ? (
               <>
                 <button
-                  onClick={() => setActiveMenu('login')}
+                  onClick={() => handleActiveMenuChange('login')}
                   className={styles.logInBtn}
                 >
                   <p>LogIn</p>

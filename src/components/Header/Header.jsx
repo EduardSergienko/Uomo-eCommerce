@@ -11,11 +11,14 @@ import { TfiBag } from 'react-icons/tfi';
 import { RiMenu2Fill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useMainContext } from 'components/Context/context';
 
 export default function Header() {
+  const { activeMenu, handleActiveMenuChange } = useMainContext();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleMenuOpen = () => {
     setIsModalOpen(!isModalOpen);
+    handleActiveMenuChange('login');
   };
 
   return (
@@ -45,7 +48,11 @@ export default function Header() {
       </Container>
       {isModalOpen && (
         <SideModal onShowModal={handleMenuOpen}>
-          <SideBarMenu />
+          <SideBarMenu
+            onShowModal={handleMenuOpen}
+            handleActiveMenuChange={handleActiveMenuChange}
+            menuToRender={activeMenu}
+          />
         </SideModal>
       )}
     </header>

@@ -3,14 +3,20 @@ import Container from 'components/Container/Container';
 import TextField from '@mui/material/TextField';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-
-export default function LogInForm({ menuChange, menuToggle }) {
+import { CgClose } from 'react-icons/cg';
+export default function LogInForm({ onShowModal, menuChange, menuToggle }) {
   return (
     <>
       <div className={styles.loginHeader}>
         <h2>LOGIN</h2>
-        <button onClick={() => menuChange('navigation')}>
+        <button
+          className={styles.goBackBtn}
+          onClick={() => menuChange('navigation')}
+        >
           <MdOutlineKeyboardArrowLeft size={25} />
+        </button>
+        <button onClick={onShowModal} className={styles.closeBtn}>
+          <CgClose size={25} />
         </button>
       </div>
       <Container>
