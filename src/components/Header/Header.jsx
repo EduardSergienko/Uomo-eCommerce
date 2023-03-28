@@ -1,5 +1,8 @@
 import Container from '../Container/Container';
 import SiteNav from 'components/SiteNav/SiteNav';
+import SideBarMenu from 'components/SideBarMenu/SideBarMenu';
+import LogInForm from 'components/LogInForm/LogInForm';
+import SideModal from 'components/SideModal/SideModal';
 import styles from './Header.module.scss';
 import logo from '../../img/logo.png';
 import { BsSearch } from 'react-icons/bs';
@@ -7,7 +10,16 @@ import { VscAccount } from 'react-icons/vsc';
 import { MdOutlineFavoriteBorder } from 'react-icons/md';
 import { TfiBag } from 'react-icons/tfi';
 import { RiMenu2Fill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 export default function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  console.log(isModalOpen);
+  const handleMenuOpen = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <header className={styles.header}>
       <Container>
@@ -18,9 +30,9 @@ export default function Header() {
             <li className={styles.userMenuItem}>
               <BsSearch size={20} />
             </li>
-            <li className={styles.userMenuItem}>
+            <Link onClick={handleMenuOpen} className={styles.userMenuItem}>
               <VscAccount size={20} />
-            </li>
+            </Link>
             <li className={styles.userMenuItem}>
               <MdOutlineFavoriteBorder size={20} />
             </li>
@@ -33,6 +45,13 @@ export default function Header() {
           </ul>
         </div>
       </Container>
+      {isModalOpen && (
+        <SideModal onShowModal={handleMenuOpen}>
+          <SideBarMenu>
+            <LogInForm />
+          </SideBarMenu>
+        </SideModal>
+      )}
     </header>
   );
 }
