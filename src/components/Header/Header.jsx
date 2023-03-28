@@ -1,7 +1,6 @@
 import Container from '../Container/Container';
 import SiteNav from 'components/SiteNav/SiteNav';
 import SideBarMenu from 'components/SideBarMenu/SideBarMenu';
-import LogInForm from 'components/LogInForm/LogInForm';
 import SideModal from 'components/SideModal/SideModal';
 import styles from './Header.module.scss';
 import logo from '../../img/logo.png';
