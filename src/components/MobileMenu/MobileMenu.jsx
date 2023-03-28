@@ -10,25 +10,21 @@ import { ReactComponent as VscAccount } from '../../img/svg/002-user.svg';
 import { Link } from 'react-router-dom';
 import ShopNav from '../ShopNav/ShopNav';
 import SideBarMenu from 'components/SideBarMenu/SideBarMenu';
-import LogInForm from 'components/LogInForm/LogInForm';
-import RegisterForm from 'components/RegisterForm/RegisterForm';
+
 export default function MobileMenu({ toggleMenu }) {
   const [activeMenu, setActiveMenu] = useState('navigation');
   const [isLogedIn, setIsLogedIn] = useState(false);
-
+  console.log(setIsLogedIn);
   function handleActiveMenuChange(menu) {
     setActiveMenu(menu);
-  }
-  function auth(status) {
-    setIsLogedIn(status);
   }
 
   return (
     <div className={styles.mobileMenuWrap}>
       <Container>
         {activeMenu !== 'shop' &&
-          activeMenu !== 'logIn' &&
-          activeMenu !== 'registration' && (
+          activeMenu !== 'login' &&
+          activeMenu !== 'register' && (
             <form className={styles.mobileMenuForm}>
               <input
                 placeholder="Search products..."
@@ -51,22 +47,17 @@ export default function MobileMenu({ toggleMenu }) {
           <SubNav handleActiveMenuChange={handleActiveMenuChange} />
         )}
         {activeMenu === 'shop' && <ShopNav menuToggle={toggleMenu} />}
-        {activeMenu === 'logIn' && (
-          <SideBarMenu>
-            <LogInForm
-              handleActiveMenuChange={handleActiveMenuChange}
-              menuToggle={toggleMenu}
-              auth={auth}
-            />
-          </SideBarMenu>
+        {activeMenu === 'login' && (
+          <SideBarMenu
+            handleActiveMenuChange={handleActiveMenuChange}
+            menuToRender={activeMenu}
+          />
         )}
-        {activeMenu === 'registration' && (
-          <SideBarMenu>
-            <RegisterForm
-              handleActiveMenuChange={handleActiveMenuChange}
-              menuToggle={toggleMenu}
-            />
-          </SideBarMenu>
+        {activeMenu === 'register' && (
+          <SideBarMenu
+            handleActiveMenuChange={handleActiveMenuChange}
+            menuToRender={activeMenu}
+          />
         )}
       </Container>
       {activeMenu !== 'shop' && (
@@ -75,7 +66,7 @@ export default function MobileMenu({ toggleMenu }) {
             {!isLogedIn ? (
               <>
                 <button
-                  onClick={() => setActiveMenu('logIn')}
+                  onClick={() => setActiveMenu('login')}
                   className={styles.logInBtn}
                 >
                   <p>LogIn</p>

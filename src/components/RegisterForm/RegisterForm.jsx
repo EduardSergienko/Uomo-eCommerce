@@ -3,12 +3,12 @@ import Container from 'components/Container/Container';
 import TextField from '@mui/material/TextField';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 
-export default function RegisterForm({ handleActiveMenuChange, menuToggle }) {
+export default function RegisterForm({ menuChange, menuToggle }) {
   return (
     <>
       <div className={styles.loginHeader}>
         <h2>CREATE AN ACCOUNT</h2>
-        <button onClick={() => handleActiveMenuChange('logIn')}>
+        <button onClick={() => menuChange('login')}>
           <MdOutlineKeyboardArrowLeft size={25} />
         </button>
       </div>

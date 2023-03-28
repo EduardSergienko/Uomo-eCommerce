@@ -4,12 +4,12 @@ import TextField from '@mui/material/TextField';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
-export default function LogInForm({ handleActiveMenuChange, menuToggle }) {
+export default function LogInForm({ menuChange, menuToggle }) {
   return (
     <>
       <div className={styles.loginHeader}>
         <h2>LOGIN</h2>
-        <button onClick={() => handleActiveMenuChange('navigation')}>
+        <button onClick={() => menuChange('navigation')}>
           <MdOutlineKeyboardArrowLeft size={25} />
         </button>
       </div>
@@ -59,9 +59,7 @@ export default function LogInForm({ handleActiveMenuChange, menuToggle }) {
         </form>
         <div className={styles.createAccLink}>
           <p>No account yet?</p>
-          <Link onClick={() => handleActiveMenuChange('registration')}>
-            Create Account
-          </Link>
+          <Link onClick={() => menuChange('register')}>Create Account</Link>
         </div>
       </Container>
     </>

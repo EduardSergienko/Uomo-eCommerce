@@ -15,7 +15,6 @@ import { useState } from 'react';
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log(isModalOpen);
   const handleMenuOpen = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -47,9 +46,7 @@ export default function Header() {
       </Container>
       {isModalOpen && (
         <SideModal onShowModal={handleMenuOpen}>
-          <SideBarMenu>
-            <LogInForm />
-          </SideBarMenu>
+          <SideBarMenu />
         </SideModal>
       )}
     </header>
