@@ -47,3 +47,14 @@
 .hiddenSiteNav {
   display: none;
 }
+
+.logInBtn {
+  border: none;
+  background: transparent;
+  display: flex;
+  margin: 0 auto 10px auto;
+
+  & p {
+    margin-right: 5px;
+  }
+}

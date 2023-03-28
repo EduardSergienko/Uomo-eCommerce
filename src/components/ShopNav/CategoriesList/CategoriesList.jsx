@@ -4,7 +4,9 @@ export default function CategoriesList({ data }) {
   return (
     <ul className={styles.categoriesList}>
       {data.map(item => (
-        <Link className={styles.categoryLink}>{item.name}</Link>
+        <Link key={item.id} className={styles.categoryLink}>
+          {item.name}
+        </Link>
       ))}
     </ul>
   );

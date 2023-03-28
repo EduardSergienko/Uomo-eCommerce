@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import styles from './SiteNav.module.scss';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
-export default function SiteNav({ subNavToggle, menuToggle }) {
+export default function SiteNav({ handleActiveMenuChange, menuToggle }) {
   const isActive = ({ isActive }) =>
     isActive ? styles.active : styles.siteNavLink;
 
@@ -12,7 +12,7 @@ export default function SiteNav({ subNavToggle, menuToggle }) {
           HOME
         </NavLink>
         <NavLink
-          onClick={() => subNavToggle('shop')}
+          onClick={() => handleActiveMenuChange('shop')}
           className={isActive}
           to="/shop"
         >
@@ -32,7 +32,7 @@ export default function SiteNav({ subNavToggle, menuToggle }) {
           LOOKBOOK
         </NavLink>
         <Link
-          onClick={() => subNavToggle('pages')}
+          onClick={() => handleActiveMenuChange('pages')}
           className={styles.siteNavLink}
         >
           PAGES

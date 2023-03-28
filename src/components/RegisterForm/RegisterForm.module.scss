@@ -1,0 +1,26 @@
+.loginHeader {
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  background: #faf9f8;
+  & h2 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
+
+.logInBtn {
+  border: none;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+.form {
+  margin-top: 30px;
+}
+.formInfo {
+  margin-top: 20px;
+}

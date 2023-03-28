@@ -10,6 +10,7 @@ import {
 } from 'swiper';
 import 'swiper/css';
 import 'swiper/scss/pagination';
+
 import { Link } from 'react-router-dom';
 import styles from './Hero.module.scss';
 import SliderImg from '../../img/slide_img.jpg';
@@ -36,20 +37,9 @@ export default function Hero() {
             dynamicBullets: true,
             clickable: true,
           }}
-          // autoplay={{ pauseOnMouseEnter: true, disableOnInteraction: false }}
+          autoplay={{ pauseOnMouseEnter: true, disableOnInteraction: false }}
           loop={true}
           speed={500}
-          effect={'creative'}
-          creativeEffect={{
-            prev: {
-              shadow: true,
-              translate: ['-110%', 0, -300],
-            },
-            next: {
-              shadow: true,
-              translate: ['110%', 0, -300],
-            },
-          }}
         >
           <SwiperSlide className={styles.slide}>
             <div className={styles.slideTexContent}>

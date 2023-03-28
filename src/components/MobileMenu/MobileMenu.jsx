@@ -5,44 +5,86 @@ import SiteNav from 'components/SiteNav/SiteNav';
 import SocialLinks from 'components/SocialLinks/SocialLinks';
 import styles from './MobileMenu.module.scss';
 import { BsSearch } from 'react-icons/bs';
+import { CiLogin } from 'react-icons/ci';
 import { ReactComponent as VscAccount } from '../../img/svg/002-user.svg';
 import { Link } from 'react-router-dom';
 import ShopNav from '../ShopNav/ShopNav';
+import SideBarMenu from 'components/SideBarMenu/SideBarMenu';
+import LogInForm from 'components/LogInForm/LogInForm';
+import RegisterForm from 'components/RegisterForm/RegisterForm';
 export default function MobileMenu({ toggleMenu }) {
   const [activeMenu, setActiveMenu] = useState('navigation');
-  function handleMenuClick(menu) {
+  const [isLogedIn, setIsLogedIn] = useState(false);
+  function handleActiveMenuChange(menu) {
     setActiveMenu(menu);
   }
 
   return (
     <div className={styles.mobileMenuWrap}>
       <Container>
-        {activeMenu !== 'shop' && (
-          <form className={styles.mobileMenuForm}>
-            <input
-              placeholder="Search products..."
-              className={styles.mobileMenuInput}
-              type="text"
-            />
-            <button className={styles.mobileMenuSerchBtn}>
-              <BsSearch />
-            </button>
-          </form>
-        )}
+        {activeMenu !== 'shop' &&
+          activeMenu !== 'logIn' &&
+          activeMenu !== 'registration' && (
+            <form className={styles.mobileMenuForm}>
+              <input
+                placeholder="Search products..."
+                className={styles.mobileMenuInput}
+                type="text"
+              />
+              <button className={styles.mobileMenuSerchBtn}>
+                <BsSearch />
+              </button>
+            </form>
+          )}
 
-        {activeMenu === 'navigation' ? (
-          <SiteNav subNavToggle={handleMenuClick} menuToggle={toggleMenu} />
-        ) : null}
-        {activeMenu === 'pages' && <SubNav subNavToggle={handleMenuClick} />}
+        {activeMenu === 'navigation' && (
+          <SiteNav
+            handleActiveMenuChange={handleActiveMenuChange}
+            menuToggle={toggleMenu}
+          />
+        )}
+        {activeMenu === 'pages' && (
+          <SubNav handleActiveMenuChange={handleActiveMenuChange} />
+        )}
         {activeMenu === 'shop' && <ShopNav menuToggle={toggleMenu} />}
+        {activeMenu === 'logIn' && (
+          <SideBarMenu>
+            <LogInForm
+              handleActiveMenuChange={handleActiveMenuChange}
+              menuToggle={toggleMenu}
+            />
+          </SideBarMenu>
+        )}
+        {activeMenu === 'registration' && (
+          <SideBarMenu>
+            <RegisterForm
+              handleActiveMenuChange={handleActiveMenuChange}
+              menuToggle={toggleMenu}
+            />
+          </SideBarMenu>
+        )}
       </Container>
       {activeMenu !== 'shop' && (
         <div className={styles.bottomNav}>
           <Container>
-            <Link className={styles.mobileAccLink}>
-              <VscAccount />
-              <p>MY ACCOUNT</p>
-            </Link>
+            {!isLogedIn ? (
+              <>
+                <button
+                  onClick={() => setActiveMenu('logIn')}
+                  className={styles.logInBtn}
+                >
+                  <p>LogIn</p>
+                  <CiLogin />
+                </button>
+              </>
+            ) : (
+              <>
+                <Link className={styles.mobileAccLink}>
+                  <VscAccount />
+                  <p>MY ACCOUNT</p>
+                </Link>
+              </>
+            )}
             <SocialLinks />
           </Container>
         </div>

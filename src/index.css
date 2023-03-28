@@ -1,4 +1,5 @@
 @import '/node_modules/modern-normalize/modern-normalize.css';
+@import './scssUtils/variables.scss';
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Jost', 'Segoe UI', 'Roboto',
@@ -17,9 +18,12 @@ h1,
 h2 {
   margin: 0;
   padding: 0;
+  color: var(--main-text-color);
+  font-weight: 400;
 }
 p {
-  font-weight: 500;
+  color: var(--secocdary-text-color);
+  font-weight: 400;
 }
 ul {
   padding: 0;
@@ -31,7 +35,7 @@ img {
 }
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--main-text-color);
   font-weight: 500;
 }
 a:hover {
@@ -39,4 +43,9 @@ a:hover {
 }
 .swiper-pagination {
   display: block;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
 }

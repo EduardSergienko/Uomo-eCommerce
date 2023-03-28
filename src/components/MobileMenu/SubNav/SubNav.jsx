@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import styles from './SubNav.module.scss';
 import { MdOutlineKeyboardArrowLeft } from 'react-icons/md';
-export default function SubNav({ subNavToggle }) {
+export default function SubNav({ handleActiveMenuChange }) {
   return (
     <div>
       <Link
         className={styles.boBackLink}
-        onClick={() => subNavToggle('navigation')}
+        onClick={() => handleActiveMenuChange('navigation')}
       >
         <MdOutlineKeyboardArrowLeft />
         PAGES
