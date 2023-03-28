@@ -15,8 +15,12 @@ import RegisterForm from 'components/RegisterForm/RegisterForm';
 export default function MobileMenu({ toggleMenu }) {
   const [activeMenu, setActiveMenu] = useState('navigation');
   const [isLogedIn, setIsLogedIn] = useState(false);
+
   function handleActiveMenuChange(menu) {
     setActiveMenu(menu);
+  }
+  function auth(status) {
+    setIsLogedIn(status);
   }
 
   return (
@@ -52,6 +56,7 @@ export default function MobileMenu({ toggleMenu }) {
             <LogInForm
               handleActiveMenuChange={handleActiveMenuChange}
               menuToggle={toggleMenu}
+              auth={auth}
             />
           </SideBarMenu>
         )}
