@@ -1,0 +1,101 @@
+@import '/src/scssUtils/animations.scss';
+
+.footer {
+  background-color: var(--footer-bg-color);
+  padding: 90px 0 0 0;
+}
+.footerLogo {
+  display: inline-block;
+  margin-bottom: 33px;
+}
+.footerContacts {
+  padding-right: 25px;
+  @media screen and (max-width: 1409px) {
+    margin-bottom: 50px;
+  }
+}
+.contactsContent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  & p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--main-text-color);
+  }
+}
+.footerNavBox {
+  @media screen and (max-width: 1409px) {
+    width: 50% !important;
+    max-width: 100%;
+    margin-bottom: 35px;
+  }
+}
+.footerNavTitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.footerNavLink {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 40px;
+  &:hover:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    display: flex;
+    width: 50%;
+    height: 2px;
+    background-color: var(--main-text-color);
+    animation-name: slideInLeft;
+    animation-duration: 250ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+  }
+}
+.subscribeBox {
+  @media screen and (max-width: 1409px) {
+    margin-top: 50px !important;
+  }
+  & p {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--main-text-color);
+  }
+}
+.footerForm {
+  position: relative;
+  margin-top: 15px;
+}
+.footerInput {
+  border: none;
+  padding: 17px 20px;
+  width: 100%;
+  &:focus {
+    outline: 2px solid var(--secondary-text-color);
+  }
+}
+.joinBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+.paymentsText {
+  margin-top: 40px;
+  margin-bottom: 11px;
+  font-weight: 500;
+}
+.bottomMenu {
+  margin-top: 88px;
+  border-top: 1px solid #cfcdcd;
+  padding: 30px 0;
+}

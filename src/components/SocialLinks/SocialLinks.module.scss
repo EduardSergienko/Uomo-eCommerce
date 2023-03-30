@@ -1,11 +1,8 @@
 .socialBox {
-  text-align: center;
-  @media screen and (min-width: 1410px) {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    align-self: center;
-  }
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  align-self: center;
 
   & p {
     @media screen and (max-width: 1409px) {
@@ -30,6 +27,25 @@
       display: block;
       &:first-child {
         margin-top: 0;
+      }
+    }
+  }
+}
+.horizontalBox {
+  text-align: left;
+
+  & p {
+    display: none;
+  }
+  & ul > a {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @media screen and (min-width: 1410px) {
+      margin-right: 50px;
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

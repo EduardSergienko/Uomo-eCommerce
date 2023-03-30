@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <section className={styles.hero}>
-      {desktopWidth && <SocialLinks />}
+      {desktopWidth && <SocialLinks isVertical={true} />}
       <div className={styles.mainHeroContent}>
         <Swiper
           modules={[

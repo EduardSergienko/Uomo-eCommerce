@@ -77,7 +77,7 @@ export default function MobileMenu({ toggleMenu }) {
                 </Link>
               </>
             )}
-            <SocialLinks />
+            <SocialLinks isVertical={false} />
           </Container>
         </div>
       )}

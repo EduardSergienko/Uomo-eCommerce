@@ -6,9 +6,9 @@ import {
   FaInstagram,
   FaPinterest,
 } from 'react-icons/fa';
-export default function SocialLinks() {
+export default function SocialLinks({ isVertical }) {
   return (
-    <div className={styles.socialBox}>
+    <div className={isVertical ? styles.socialBox : styles.horizontalBox}>
       <p>FOLLOW US</p>
       <ul>
         <Link target="_blank" to="https://m.facebook.com/">
