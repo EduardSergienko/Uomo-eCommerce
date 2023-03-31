@@ -8,6 +8,7 @@ export default function DropDown({ dropMenu, onMouseEnter }) {
       style={{
         position: 'absolute',
         backgroundColor: 'white',
+        paddingTop: 30,
       }}
     >
       {dropMenu === 'pages' && <PageDropdown />}

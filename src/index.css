@@ -10,7 +10,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Jost', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 p,
@@ -37,6 +37,7 @@ a {
   text-decoration: none;
   color: var(--main-text-color);
   font-weight: 500;
+  font-family: 'Jost';
 }
 a:hover {
   color: inherit;

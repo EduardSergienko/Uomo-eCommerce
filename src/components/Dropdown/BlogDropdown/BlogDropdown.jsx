@@ -1,23 +1,23 @@
 import { Link } from 'react-router-dom';
-
+import styles from './BlogDropdown.module.scss';
 export default function BlogDropdown() {
   return (
-    <div>
+    <div className={styles.dropdownOverlay}>
       <ul>
         <li>
-          <Link>1</Link>
+          <Link to="blog/all">All Posts</Link>
         </li>
         <li>
-          <Link>2 Us</Link>
+          <Link to="blog/company">Company</Link>
         </li>
         <li>
-          <Link>3 Locator</Link>
+          <Link to="blog/fashion"> Fashion</Link>
         </li>
         <li>
-          <Link>4</Link>
+          <Link to="blog/style">StylePosts</Link>
         </li>
         <li>
-          <Link>5 Soon</Link>
+          <Link to="blog/trends">Trends</Link>
         </li>
       </ul>
     </div>

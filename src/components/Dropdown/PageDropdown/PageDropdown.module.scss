@@ -1,0 +1,5 @@
+@import '../../../scssUtils/plaseholders.scss';
+
+.dropdownOverlay {
+  @extend %dropDownStyles;
+}

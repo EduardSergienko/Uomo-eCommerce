@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom';
-
+import styles from './PageDropdown.module.scss';
 export default function PageDropdown() {
   return (
-    <div>
+    <div className={styles.dropdownOverlay}>
       <ul>
         <li>
-          <Link>About</Link>
+          <Link to="about">About</Link>
         </li>
         <li>
-          <Link>Contact Us</Link>
+          <Link to="contacts">Contact Us</Link>
         </li>
         <li>
-          <Link>Store Locator</Link>
+          <Link to="store_locations">Store Locator</Link>
         </li>
         <li>
-          <Link>FAQ</Link>
+          <Link to="faq">FAQ</Link>
         </li>
         <li>
           <Link>Coming Soon</Link>
