@@ -12,7 +12,7 @@ import ShopNav from '../ShopNav/ShopNav';
 import SideBarMenu from 'components/SideBarMenu/SideBarMenu';
 
 export default function MobileMenu({ toggleMenu }) {
-  const { activeMenu, isLogedIn, handleActiveMenuChange } = useMainContext();
+  const { activeMenu, isLoggedIn, handleActiveMenuChange } = useMainContext();
   console.log(activeMenu);
 
   return (
@@ -27,18 +27,13 @@ export default function MobileMenu({ toggleMenu }) {
                 className={styles.mobileMenuInput}
                 type="text"
               />
-              <button className={styles.mobileMenuSerchBtn}>
+              <button className={styles.mobileMenuSearchBtn}>
                 <BsSearch />
               </button>
             </form>
           )}
 
-        {activeMenu === 'navigation' && (
-          <SiteNav
-            handleActiveMenuChange={handleActiveMenuChange}
-            menuToggle={toggleMenu}
-          />
-        )}
+        {activeMenu === 'navigation' && <SiteNav menuToggle={toggleMenu} />}
         {activeMenu === 'pages' && (
           <SubNav handleActiveMenuChange={handleActiveMenuChange} />
         )}
@@ -59,7 +54,7 @@ export default function MobileMenu({ toggleMenu }) {
       {activeMenu !== 'shop' && (
         <div className={styles.bottomNav}>
           <Container>
-            {!isLogedIn ? (
+            {!isLoggedIn ? (
               <>
                 <button
                   onClick={() => handleActiveMenuChange('login')}

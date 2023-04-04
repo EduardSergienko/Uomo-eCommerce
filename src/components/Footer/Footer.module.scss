@@ -27,8 +27,8 @@
 }
 .footerNavBox {
   @media screen and (max-width: 1409px) {
-    width: 50% !important;
-    max-width: 100%;
+    max-width: 50% !important;
+    width: 100%;
     margin-bottom: 35px;
   }
 }
@@ -59,7 +59,7 @@
   }
 }
 .subscribeBox {
-  @media screen and (max-width: 1409px) {
+  @media screen and (max-width: 575px) {
     margin-top: 50px !important;
   }
   & p {
@@ -98,4 +98,7 @@
   margin-top: 88px;
   border-top: 1px solid #cfcdcd;
   padding: 30px 0;
+}
+.paymentMethodsImg {
+  max-width: 100%;
 }

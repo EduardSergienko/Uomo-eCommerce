@@ -100,12 +100,12 @@ export default function Footer() {
                 placeholder="Your email address"
                 type="text"
               />
-              <button className={styles.joinBtn} type="buton">
+              <button className={styles.joinBtn} type="button">
                 JOIN
               </button>
             </form>
             <p className={styles.paymentsText}>Secure payments</p>
-            <img src={payments} alt="" />
+            <img className={styles.paymentMethodsImg} src={payments} alt="" />
           </Col>
         </Row>
         <div className={styles.bottomMenu}>

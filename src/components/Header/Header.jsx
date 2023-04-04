@@ -2,9 +2,11 @@ import Container from '../Container/Container';
 import SiteNav from 'components/SiteNav/SiteNav';
 import SideBarMenu from 'components/SideBarMenu/SideBarMenu';
 import SideModal from 'components/SideModal/SideModal';
+import SearchBar from 'components/SearchBar/SearchBar';
 import styles from './Header.module.scss';
 import logo from '../../img/logo.png';
 import { BsSearch } from 'react-icons/bs';
+import { CgClose } from 'react-icons/cg';
 import { VscAccount } from 'react-icons/vsc';
 import { MdOutlineFavoriteBorder } from 'react-icons/md';
 import { TfiBag } from 'react-icons/tfi';
@@ -16,9 +18,15 @@ import { useMainContext } from 'components/Context/context';
 export default function Header() {
   const { activeMenu, handleActiveMenuChange } = useMainContext();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const handleMenuOpen = () => {
+  const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
+
+  const handleSearchBarOpen = () => {
+    setIsSearchBarOpen(!isSearchBarOpen);
+  };
+
+  const handleMenuOpen = menuName => {
     setIsModalOpen(!isModalOpen);
-    handleActiveMenuChange('login');
+    handleActiveMenuChange(menuName);
   };
 
   return (
@@ -28,10 +36,13 @@ export default function Header() {
           <img src={logo} alt="logo" />
           <SiteNav />
           <ul className={styles.userMenu}>
-            <li className={styles.userMenuItem}>
-              <BsSearch size={20} />
-            </li>
-            <Link onClick={handleMenuOpen} className={styles.userMenuItem}>
+            <Link onClick={handleSearchBarOpen} className={styles.userMenuItem}>
+              {isSearchBarOpen ? <CgClose size={20} /> : <BsSearch size={20} />}
+            </Link>
+            <Link
+              onClick={() => handleMenuOpen('login')}
+              className={styles.userMenuItem}
+            >
               <VscAccount size={20} />
             </Link>
             <li className={styles.userMenuItem}>
@@ -46,6 +57,7 @@ export default function Header() {
           </ul>
         </div>
       </Container>
+      {isSearchBarOpen && <SearchBar searchBarToggle={handleSearchBarOpen} />}
       {isModalOpen && (
         <SideModal onShowModal={handleMenuOpen}>
           <SideBarMenu

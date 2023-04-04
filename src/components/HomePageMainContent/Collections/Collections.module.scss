@@ -1,0 +1,101 @@
+.collectionSection {
+  padding: 100px 0;
+}
+
+.womenCollection {
+  padding-left: 30px;
+  position: relative;
+  background-color: #f2f3f7;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: bottom;
+  background-image: url('../../../img/home/collections/collection_img_1_mob.jpg');
+  min-height: 285px;
+  display: flex;
+  align-items: flex-end;
+  @media screen and (min-width: 1410px) {
+    background-image: url('../../../img/home/collections/collection_img_1.jpg');
+    height: 100%;
+    background-position-y: unset;
+  }
+}
+
+.menCollection {
+  padding-left: 30px;
+  display: flex;
+  align-items: flex-end;
+  background-color: #e5e2dd;
+
+  & div {
+    padding-bottom: 40px;
+  }
+}
+.kidsCollection {
+  padding-left: 30px;
+  position: relative;
+  background-color: #e7e6e4;
+  background-image: url('../../../img/home/collections/collection_img_3_mob.jpg');
+  min-height: 285px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: bottom;
+  display: flex;
+  align-items: flex-end;
+  @media screen and (min-width: 1410px) {
+    background-image: url('../../../img/home/collections/collection_img_3.jpg');
+    height: 100%;
+    background-position-y: unset;
+  }
+}
+.collectionImg {
+  margin-left: auto;
+}
+.eGift {
+  padding: 109px 77px 40px 40px;
+  background-color: #f5e6e0;
+  & h2 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
+  & span {
+    font-weight: 700;
+  }
+  & p {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--main-text-color);
+    margin-bottom: 16px;
+  }
+  & a {
+    &::after {
+      content: '';
+      display: block;
+      width: 25%;
+      height: 2px;
+      background-color: black;
+    }
+  }
+}
+.aboutCollection {
+  padding-bottom: 40px;
+  & h2 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
+  & span {
+    font-weight: 700;
+  }
+  & a {
+    &::after {
+      content: '';
+      display: block;
+      width: 25%;
+      height: 2px;
+      background-color: black;
+    }
+  }
+}

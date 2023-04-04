@@ -5,7 +5,9 @@ import PageDropdown from 'components/Dropdown/PageDropdown/PageDropdown';
 import BlogDropdown from 'components/Dropdown/BlogDropdown/BlogDropdown';
 import 'rc-dropdown/assets/index.css';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
-export default function SiteNav({ handleActiveMenuChange, menuToggle }) {
+import { useMainContext } from 'components/Context/context';
+export default function SiteNav({ menuToggle }) {
+  const { handleActiveMenuChange } = useMainContext();
   const isActive = ({ isActive }) =>
     isActive ? styles.active : styles.siteNavLink;
 

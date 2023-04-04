@@ -3,22 +3,22 @@ import { MainContext } from './context';
 
 export default function Provider({ children }) {
   const [activeMenu, setActiveMenu] = useState(null);
-  const [isLogedIn, setIsLogedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleActiveMenuChange = menu => {
     setActiveMenu(menu);
   };
 
   const logIn = () => {
-    setIsLogedIn(true);
+    setIsLoggedIn(true);
   };
   const logOut = () => {
-    setIsLogedIn(false);
+    setIsLoggedIn(false);
   };
 
   const providerValue = {
     activeMenu,
-    isLogedIn,
+    isLoggedIn,
     handleActiveMenuChange,
     logIn,
     logOut,
