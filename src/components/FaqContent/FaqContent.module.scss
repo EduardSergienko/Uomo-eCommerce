@@ -1,0 +1,39 @@
+.faqSection {
+  padding: 100px 0;
+}
+
+.faqWrap {
+  max-width: 930px;
+  margin: 0 auto;
+}
+.faqTitle {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 51px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+.faqBox {
+  margin-bottom: 50px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  & h2 {
+    margin-bottom: 24px;
+  }
+}
+.item {
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4e4e4;
+}
+.answer {
+  margin-top: 30px;
+}

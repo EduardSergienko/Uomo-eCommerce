@@ -1,0 +1,25 @@
+.serviceSection {
+  padding-bottom: 50px;
+}
+.serviceList {
+  text-align: center;
+  & h2 {
+    margin-top: 28px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  & p {
+    margin-top: 8px;
+  }
+  & li {
+    margin-bottom: 74px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}

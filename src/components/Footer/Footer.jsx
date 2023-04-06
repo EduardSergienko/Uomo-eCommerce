@@ -29,7 +29,9 @@ export default function Footer() {
             <h2 className={styles.footerNavTitle}>Company</h2>
             <ul className={styles.footerNavList}>
               <li>
-                <Link className={styles.footerNavLink}>About Us</Link>
+                <Link to="about" className={styles.footerNavLink}>
+                  About Us
+                </Link>
               </li>
               <li>
                 <Link className={styles.footerNavLink}>Careers</Link>
@@ -38,7 +40,9 @@ export default function Footer() {
                 <Link className={styles.footerNavLink}>Affiliates</Link>
               </li>
               <li>
-                <Link className={styles.footerNavLink}>Blog</Link>
+                <Link to="blog" className={styles.footerNavLink}>
+                  Blog
+                </Link>
               </li>
               <li>
                 <Link className={styles.footerNavLink}>Contact Us</Link>

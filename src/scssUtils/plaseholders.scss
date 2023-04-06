@@ -25,3 +25,13 @@
     display: none;
   }
 }
+%basicCardCollection {
+  padding-left: 30px;
+  margin-bottom: 15px;
+  min-height: 285px;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: bottom;
+  display: flex;
+  align-items: flex-end;
+}

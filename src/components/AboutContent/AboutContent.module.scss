@@ -1,0 +1,68 @@
+.aboutSection {
+  padding: 90px 0;
+}
+
+.aboutTitle {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 51px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  padding-left: 225px;
+}
+
+.storyTitle {
+  font-size: 26px;
+  line-height: 38px;
+  margin-bottom: 15px;
+}
+.ourStory {
+  padding: 50px 0;
+  max-width: 929px;
+  margin: 0 auto;
+}
+.storyText {
+  margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--main-text-color);
+}
+.ourPrinciples {
+  display: flex;
+  margin-top: 33px;
+  & h2 {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 20px;
+  }
+  & p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.aboutCompanyWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+.aboutCompany {
+  max-width: 555px;
+  & h2 {
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--secondary-text-color);
+    margin-bottom: 9px;
+  }
+  & p {
+    margin-bottom: 20px;
+    color: var(--main-text-color);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.brands {
+  display: flex;
+  justify-content: space-between;
+}

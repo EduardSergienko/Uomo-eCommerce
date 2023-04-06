@@ -1,55 +1,69 @@
+@import '/src/scssUtils/plaseholders.scss';
+
 .collectionSection {
   padding: 100px 0;
 }
-
+.collectionsWrap {
+  @media screen and (min-width: 1410px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.rightBox {
+  @media screen and (min-width: 1410px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: calc(50% - 15px);
+  }
+}
 .womenCollection {
-  padding-left: 30px;
-  position: relative;
+  @extend %basicCardCollection;
   background-color: #f2f3f7;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-position-y: bottom;
   background-image: url('../../../img/home/collections/collection_img_1_mob.jpg');
-  min-height: 285px;
-  display: flex;
-  align-items: flex-end;
   @media screen and (min-width: 1410px) {
     background-image: url('../../../img/home/collections/collection_img_1.jpg');
-    height: 100%;
+    max-width: calc(50% - 15px);
+    width: 100%;
     background-position-y: unset;
+    margin-bottom: 0;
+    min-height: unset;
+    padding-left: 40px;
   }
 }
 
+.kidsCollection {
+  @extend %basicCardCollection;
+  background-color: #e7e6e4;
+  background-image: url('../../../img/home/collections/collection_img_3_mob.jpg');
+  @media screen and (min-width: 1410px) {
+    background-image: url('../../../img/home/collections/collection_img_3.jpg');
+    background-position-y: unset;
+    max-width: 48%;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
 .menCollection {
   padding-left: 30px;
   display: flex;
   align-items: flex-end;
   background-color: #e5e2dd;
-
-  & div {
-    padding-bottom: 40px;
-  }
-}
-.kidsCollection {
-  padding-left: 30px;
-  position: relative;
-  background-color: #e7e6e4;
-  background-image: url('../../../img/home/collections/collection_img_3_mob.jpg');
+  margin-bottom: 15px;
   min-height: 285px;
   background-repeat: no-repeat;
   background-position: right;
-  background-position-y: bottom;
-  display: flex;
-  align-items: flex-end;
+  background-size: auto;
+  background-image: url(../../../img/home/collections/collection_img_2_mob.jpg);
+
   @media screen and (min-width: 1410px) {
-    background-image: url('../../../img/home/collections/collection_img_3.jpg');
-    height: 100%;
-    background-position-y: unset;
+    background-image: url(../../../img/home/collections/collection_img_2.jpg);
+    margin-bottom: 30px;
+    width: 100%;
+    min-height: 285px;
   }
 }
-.collectionImg {
-  margin-left: auto;
-}
+
 .eGift {
   padding: 109px 77px 40px 40px;
   background-color: #f5e6e0;
@@ -76,6 +90,10 @@
       height: 2px;
       background-color: black;
     }
+  }
+  @media screen and (min-width: 1410px) {
+    max-width: 48%;
+    width: 100%;
   }
 }
 .aboutCollection {

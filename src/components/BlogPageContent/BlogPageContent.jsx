@@ -1,5 +1,9 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
 export default function BlogPageContent() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div
       style={{
