@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { BsPlus } from 'react-icons/bs';
 import { BiMinus } from 'react-icons/bi';
 import { questions } from 'data/faqQuestions';
-import { CSSTransition } from 'react-transition-group';
+// import { CSSTransition } from 'react-transition-group';
 export default function FaqContent() {
   const [showAnswer, setShowAnswer] = useState({});
 
