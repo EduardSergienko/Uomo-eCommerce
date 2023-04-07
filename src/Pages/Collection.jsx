@@ -1,4 +1,4 @@
-export default function Shop() {
+export default function Collection() {
   return (
     <div
       style={{
@@ -8,7 +8,7 @@ export default function Shop() {
         height: '100vh',
       }}
     >
-      <h1>Shop</h1>
+      <h1>Collection</h1>
     </div>
   );
 }

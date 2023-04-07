@@ -17,7 +17,7 @@ import SliderImg from '../../img/slide_img.jpg';
 import SliderImgMob from '../../img/slide_img_mob.jpg';
 import SocialLinks from 'components/SocialLinks/SocialLinks';
 export default function Hero() {
-  const desktopWidth = useMediaQuery('(min-width:1410px)');
+  const desktopWidth = useMediaQuery('(min-width:1280px)');
 
   return (
     <section className={styles.hero}>
@@ -53,12 +53,12 @@ export default function Hero() {
               <picture>
                 <source
                   type="image/jpeg"
-                  media="(min-width: 1410px)"
+                  media="(min-width: 1280px)"
                   srcSet={SliderImg}
                 />
                 <source
                   type="image/jpeg"
-                  media="(max-width: 1409px)"
+                  media="(max-width: 1279px)"
                   srcSet={SliderImgMob}
                 />
                 <img src={SliderImg} alt="" />
@@ -77,12 +77,12 @@ export default function Hero() {
               <picture>
                 <source
                   type="image/jpeg"
-                  media="(min-width: 1410px)"
+                  media="(min-width: 1280px)"
                   srcSet={SliderImg}
                 />
                 <source
                   type="image/jpeg"
-                  media="(max-width: 1409px)"
+                  media="(max-width: 1279px)"
                   srcSet={SliderImgMob}
                 />
                 <img src={SliderImg} alt="" />
@@ -101,12 +101,12 @@ export default function Hero() {
               <picture>
                 <source
                   type="image/jpeg"
-                  media="(min-width: 1410px)"
+                  media="(min-width: 1280px)"
                   srcSet={SliderImg}
                 />
                 <source
                   type="image/jpeg"
-                  media="(max-width: 1409px)"
+                  media="(max-width: 1279px)"
                   srcSet={SliderImgMob}
                 />
                 <img src={SliderImg} alt="" />
@@ -125,12 +125,12 @@ export default function Hero() {
               <picture>
                 <source
                   type="image/jpeg"
-                  media="(min-width: 1410px)"
+                  media="(min-width: 1280px)"
                   srcSet={SliderImg}
                 />
                 <source
                   type="image/jpeg"
-                  media="(max-width: 1409px)"
+                  media="(max-width: 1279px)"
                   srcSet={SliderImgMob}
                 />
                 <img src={SliderImg} alt="" />

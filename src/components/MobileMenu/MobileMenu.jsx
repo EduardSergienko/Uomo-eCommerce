@@ -13,7 +13,6 @@ import SideBarMenu from 'components/SideBarMenu/SideBarMenu';
 
 export default function MobileMenu({ toggleMenu }) {
   const { activeMenu, isLoggedIn, handleActiveMenuChange } = useMainContext();
-  console.log(activeMenu);
 
   return (
     <div className={styles.mobileMenuWrap}>

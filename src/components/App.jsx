@@ -2,6 +2,8 @@ import Layout from './Layout/Layout';
 import { Routes, Route } from 'react-router-dom';
 import Home from 'Pages/Home';
 import Shop from 'Pages/Shop';
+import Collection from 'Pages/Collection';
+import LookBook from 'Pages/LookBook';
 import About from 'Pages/About';
 import Contacts from 'Pages/Contacts';
 import StoreLocations from 'Pages/StoreLocations';
@@ -20,6 +22,8 @@ export const App = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/lookbook" element={<LookBook />} />
         <Route path="/store_locations" element={<StoreLocations />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/blog" element={<Blog />}>

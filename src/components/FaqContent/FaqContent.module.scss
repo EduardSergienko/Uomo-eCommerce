@@ -40,15 +40,19 @@
 }
 .enter {
   opacity: 0;
+  transform: translateY(-50%);
 }
 .enterActive {
   opacity: 1;
+  transform: translateY(0);
   transition: 250ms linear;
 }
 .exit {
   opacity: 1;
+  transform: translateY(0);
 }
 .exitActive {
   opacity: 0;
-  // transition: 250ms linear;
+  transform: translateY(-50%);
+  transition: 250ms linear;
 }

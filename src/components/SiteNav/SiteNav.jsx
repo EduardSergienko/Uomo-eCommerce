@@ -33,7 +33,7 @@ export default function SiteNav({ menuToggle }) {
           </NavLink>
         </li>
         <li>
-          <NavLink className={isActive} to="/collection">
+          <NavLink onClick={menuToggle} className={isActive} to="/collection">
             COLLECTION
           </NavLink>
         </li>
@@ -46,7 +46,7 @@ export default function SiteNav({ menuToggle }) {
           </li>
         </Dropdown>
         <li>
-          <NavLink className={isActive} to="/lookbook">
+          <NavLink onClick={menuToggle} className={isActive} to="/lookbook">
             LOOKBOOK
           </NavLink>
         </li>

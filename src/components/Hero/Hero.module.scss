@@ -1,8 +1,8 @@
 .hero {
-  @media screen and (min-width: 1410px) {
+  @media screen and (min-width: 1280px) {
     max-width: 1900px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 25px;
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
@@ -10,7 +10,7 @@
 }
 
 .mainHeroContent {
-  @media screen and (min-width: 1410px) {
+  @media screen and (min-width: 1280px) {
     max-width: 1800px;
     width: 100%;
     padding: 5px;
@@ -18,7 +18,7 @@
   }
 }
 .sideText {
-  @media screen and (max-width: 1409px) {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
   align-self: flex-end;
@@ -48,7 +48,7 @@
   display: flex;
   align-items: center;
 
-  @media screen and (min-width: 1410px) {
+  @media screen and (min-width: 1280px) {
     background-image: url('../../img/slide_bg.jpg');
     justify-content: space-evenly;
     padding-top: 47px;
@@ -64,7 +64,7 @@
   left: 15px;
   z-index: 10;
   cursor: default;
-  @media screen and (min-width: 1410px) {
+  @media screen and (min-width: 1280px) {
     width: 780px;
     position: unset;
   }
@@ -89,7 +89,7 @@
     font-size: 30px;
     line-height: 40px;
     margin-bottom: 8px;
-    @media screen and (min-width: 1410px) {
+    @media screen and (min-width: 1280px) {
       font-size: 70px;
       line-height: 80px;
     }
@@ -109,7 +109,7 @@
 }
 .slideImg {
   margin-left: auto;
-  @media screen and (min-width: 1410px) {
+  @media screen and (min-width: 1280px) {
     transform: translateX(-110px);
     margin-left: 0;
   }

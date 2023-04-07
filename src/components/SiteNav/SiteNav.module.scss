@@ -1,7 +1,7 @@
 @import '../../scssUtils/plaseholders.scss';
 @import '../../scssUtils/animations.scss';
 .siteNav {
-  @media screen and (min-width: 1410px) {
+  @media screen and (min-width: 1280px) {
     flex: auto;
     margin-left: 55px;
   }
@@ -14,7 +14,7 @@
     }
   }
 
-  @media screen and (min-width: 1410px) {
+  @media screen and (min-width: 1280px) {
     display: flex;
     & li {
       position: relative;
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media screen and (min-width: 1410px) {
+  @media screen and (min-width: 1280px) {
     display: block;
     margin-bottom: 0;
     color: black;
@@ -46,7 +46,7 @@
   &::after {
     content: '';
     position: absolute;
-    @media screen and (max-width: 1409px) {
+    @media screen and (max-width: 1279px) {
       bottom: -5px;
       width: 5%;
     }
@@ -63,7 +63,7 @@
   }
 }
 .siteNavLinkSvg {
-  @media screen and (min-width: 1410px) {
+  @media screen and (min-width: 1280px) {
     display: none;
   }
 }

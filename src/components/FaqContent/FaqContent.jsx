@@ -6,7 +6,7 @@ import { questions } from 'data/faqQuestions';
 import { CSSTransition } from 'react-transition-group';
 export default function FaqContent() {
   const [showAnswer, setShowAnswer] = useState({});
-  console.log(styles);
+
   function toggleAnswer(question) {
     setShowAnswer({
       ...showAnswer,
