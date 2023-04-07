@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { BsPlus } from 'react-icons/bs';
 import { BiMinus } from 'react-icons/bi';
 import { questions } from 'data/faqQuestions';
-// import { CSSTransition } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 export default function FaqContent() {
   const [showAnswer, setShowAnswer] = useState({});
-
+  console.log(styles);
   function toggleAnswer(question) {
     setShowAnswer({
       ...showAnswer,
@@ -40,10 +40,14 @@ export default function FaqContent() {
                         <p>{item.question}</p>
                         {showAnswer[item.id] ? <BiMinus /> : <BsPlus />}
                       </div>
-
-                      {showAnswer[item.id] && (
+                      <CSSTransition
+                        in={showAnswer[item.id]}
+                        unmountOnExit
+                        classNames={styles}
+                        timeout={250}
+                      >
                         <p className={styles.answer}>{item.answer}</p>
-                      )}
+                      </CSSTransition>
                     </li>
                   );
                 })}

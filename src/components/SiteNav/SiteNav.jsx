@@ -40,7 +40,7 @@ export default function SiteNav({ menuToggle }) {
 
         <Dropdown animation="slide-up" overlay={<BlogDropdown />}>
           <li>
-            <NavLink className={isActive} to="/blog">
+            <NavLink onClick={menuToggle} className={isActive} to="/blog">
               JOURNAL
             </NavLink>
           </li>

@@ -35,7 +35,10 @@ export default function MobileMenu({ toggleMenu }) {
 
         {activeMenu === 'navigation' && <SiteNav menuToggle={toggleMenu} />}
         {activeMenu === 'pages' && (
-          <SubNav handleActiveMenuChange={handleActiveMenuChange} />
+          <SubNav
+            toggleMenu={toggleMenu}
+            handleActiveMenuChange={handleActiveMenuChange}
+          />
         )}
         {activeMenu === 'shop' && <ShopNav menuToggle={toggleMenu} />}
         {activeMenu === 'login' && (

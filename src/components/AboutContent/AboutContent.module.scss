@@ -8,7 +8,9 @@
   line-height: 51px;
   text-transform: uppercase;
   margin-bottom: 32px;
-  padding-left: 225px;
+  @media screen and (min-width: 1280px) {
+    padding-left: 225px;
+  }
 }
 
 .storyTitle {
@@ -41,12 +43,20 @@
   }
 }
 .aboutCompanyWrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .aboutCompany {
+  @media screen and (max-width: 1279px) {
+    margin-top: 25px;
+  }
   max-width: 555px;
   & h2 {
     font-size: 16px;
@@ -64,5 +74,19 @@
 }
 .brands {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  & li {
+    margin-bottom: 50px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    & li {
+      margin-bottom: 0;
+    }
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

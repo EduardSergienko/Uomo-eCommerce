@@ -20,7 +20,7 @@ export default function AboutContent() {
     <section id="about" className={styles.aboutSection}>
       <Container>
         <h1 className={styles.aboutTitle}>about uomo</h1>
-        <img src={aboutHeroImg} alt="" />
+        <img style={{ maxWidth: '100%' }} src={aboutHeroImg} alt="" />
         <div className={styles.ourStory}>
           <h2 className={styles.storyTitle}>OUR STORY</h2>
           <p className={styles.storyText}>
@@ -57,7 +57,7 @@ export default function AboutContent() {
           </div>
         </div>
         <div className={styles.aboutCompanyWrap}>
-          <img src={aboutCompanyImg} alt="" />
+          <img style={{ maxWidth: '100%' }} src={aboutCompanyImg} alt="" />
           <div className={styles.aboutCompany}>
             <h2>THE COMPANY</h2>
             <p>

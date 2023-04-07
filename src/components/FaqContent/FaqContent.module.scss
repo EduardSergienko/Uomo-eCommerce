@@ -3,7 +3,8 @@
 }
 
 .faqWrap {
-  max-width: 930px;
+  max-width: 950px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 .faqTitle {
@@ -36,4 +37,18 @@
 }
 .answer {
   margin-top: 30px;
+}
+.enter {
+  opacity: 0;
+}
+.enterActive {
+  opacity: 1;
+  transition: 250ms linear;
+}
+.exit {
+  opacity: 1;
+}
+.exitActive {
+  opacity: 0;
+  // transition: 250ms linear;
 }
