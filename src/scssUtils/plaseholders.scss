@@ -1,7 +1,7 @@
 %NavLink {
   display: flex;
   justify-content: space-between;
-
+  padding: 20px;
   @media screen and (min-width: 1410px) {
     margin-bottom: 0;
     color: black;
@@ -11,10 +11,8 @@
   position: absolute;
   left: -25px;
   background-color: white;
-  padding: 25px 120px 20px 25px;
-  & ul {
-    min-width: 100px;
-  }
+  padding: 25px;
+  min-width: 200px;
   & li {
     margin-bottom: 25px;
     &:last-child {

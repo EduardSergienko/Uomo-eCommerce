@@ -19,14 +19,8 @@
     & li {
       position: relative;
       margin-bottom: 0;
-      margin-right: 40px;
-      height: 8vh;
       display: flex;
       align-items: center;
-
-      & :last-child {
-        margin-right: 0;
-      }
     }
   }
 }
@@ -42,6 +36,7 @@
     display: block;
     margin-bottom: 0;
     color: black;
+    padding: 20px;
   }
   &::after {
     content: '';
@@ -56,10 +51,9 @@
     animation-duration: 250ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
-    width: 50%;
+    width: 25%;
     margin-top: 2px;
     display: block;
-    bottom: 0;
   }
 }
 .siteNavLinkSvg {
