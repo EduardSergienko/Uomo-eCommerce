@@ -2,6 +2,7 @@ import Layout from './Layout/Layout';
 import { Routes, Route } from 'react-router-dom';
 import Home from 'Pages/Home';
 import Shop from 'Pages/Shop';
+import ItemDetail from 'Pages/ItemDetail';
 import Collection from 'Pages/Collection';
 import LookBook from 'Pages/LookBook';
 import About from 'Pages/About';
@@ -14,12 +15,16 @@ import Company from './BlogPageContent/Company/Company';
 import Fashion from './BlogPageContent/Fashion/Fashion';
 import StylePosts from './BlogPageContent/StylePosts/StylePosts';
 import Trends from './BlogPageContent/Trends/Trends';
+
 export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
+        {/* <Route path="/shop" element={<Shop />} /> */}
+        <Route path="/shop/:category" element={<Shop />} />
+        <Route path="/shop/:category/:itemId" element={<ItemDetail />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/collection" element={<Collection />} />

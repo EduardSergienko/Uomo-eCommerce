@@ -1,9 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import styles from './SiteNav.module.scss';
-import Dropdown from 'rc-dropdown';
 import PageDropdown from 'components/Dropdown/PageDropdown/PageDropdown';
 import BlogDropdown from 'components/Dropdown/BlogDropdown/BlogDropdown';
-import 'rc-dropdown/assets/index.css';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { useMainContext } from 'components/Context/context';
 export default function SiteNav({ menuToggle }) {
@@ -23,7 +21,7 @@ export default function SiteNav({ menuToggle }) {
           <NavLink
             onClick={() => handleActiveMenuChange('shop')}
             className={isActive}
-            to="/shop"
+            to="/shop/all"
           >
             SHOP
             <MdOutlineKeyboardArrowRight
@@ -38,32 +36,32 @@ export default function SiteNav({ menuToggle }) {
           </NavLink>
         </li>
 
-        <Dropdown animation="slide-up" overlay={<BlogDropdown />}>
-          <li>
-            <NavLink onClick={menuToggle} className={isActive} to="/blog">
-              JOURNAL
-            </NavLink>
-          </li>
-        </Dropdown>
+        <li>
+          <NavLink onClick={menuToggle} className={isActive} to="/blog">
+            JOURNAL
+          </NavLink>
+          <BlogDropdown />
+        </li>
+
         <li>
           <NavLink onClick={menuToggle} className={isActive} to="/lookbook">
             LOOKBOOK
           </NavLink>
         </li>
-        <Dropdown animation="slide-up" overlay={<PageDropdown />}>
-          <li>
-            <Link
-              onClick={() => handleActiveMenuChange('pages')}
-              className={styles.siteNavLink}
-            >
-              PAGES
-              <MdOutlineKeyboardArrowRight
-                className={styles.siteNavLinkSvg}
-                size={20}
-              />
-            </Link>
-          </li>
-        </Dropdown>
+
+        <li>
+          <Link
+            onClick={() => handleActiveMenuChange('pages')}
+            className={styles.siteNavLink}
+          >
+            PAGES
+            <MdOutlineKeyboardArrowRight
+              className={styles.siteNavLinkSvg}
+              size={20}
+            />
+          </Link>
+          <PageDropdown />
+        </li>
       </ul>
     </nav>
   );

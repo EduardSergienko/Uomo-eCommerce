@@ -16,68 +16,68 @@ export default function MobileMenu({ toggleMenu }) {
 
   return (
     <div className={styles.mobileMenuWrap}>
-      <Container>
-        {activeMenu !== 'shop' &&
-          activeMenu !== 'login' &&
-          activeMenu !== 'register' && (
-            <form className={styles.mobileMenuForm}>
-              <input
-                placeholder="Search products..."
-                className={styles.mobileMenuInput}
-                type="text"
-              />
-              <button className={styles.mobileMenuSearchBtn}>
-                <BsSearch />
-              </button>
-            </form>
+      {activeMenu !== 'shop' &&
+        activeMenu !== 'login' &&
+        activeMenu !== 'register' && (
+          <form className={styles.mobileMenuForm}>
+            <input
+              placeholder="Search products..."
+              className={styles.mobileMenuInput}
+              type="text"
+            />
+            <button className={styles.mobileMenuSearchBtn}>
+              <BsSearch />
+            </button>
+          </form>
+        )}
+      <div style={{ overflow: 'scroll' }}>
+        <Container>
+          {activeMenu === 'navigation' && <SiteNav menuToggle={toggleMenu} />}
+          {activeMenu === 'pages' && (
+            <SubNav
+              toggleMenu={toggleMenu}
+              handleActiveMenuChange={handleActiveMenuChange}
+            />
           )}
+          {activeMenu === 'shop' && <ShopNav menuToggle={toggleMenu} />}
+          {activeMenu === 'login' && (
+            <SideBarMenu
+              handleActiveMenuChange={handleActiveMenuChange}
+              menuToRender={activeMenu}
+            />
+          )}
+          {activeMenu === 'register' && (
+            <SideBarMenu
+              handleActiveMenuChange={handleActiveMenuChange}
+              menuToRender={activeMenu}
+            />
+          )}
+        </Container>
+      </div>
 
-        {activeMenu === 'navigation' && <SiteNav menuToggle={toggleMenu} />}
-        {activeMenu === 'pages' && (
-          <SubNav
-            toggleMenu={toggleMenu}
-            handleActiveMenuChange={handleActiveMenuChange}
-          />
-        )}
-        {activeMenu === 'shop' && <ShopNav menuToggle={toggleMenu} />}
-        {activeMenu === 'login' && (
-          <SideBarMenu
-            handleActiveMenuChange={handleActiveMenuChange}
-            menuToRender={activeMenu}
-          />
-        )}
-        {activeMenu === 'register' && (
-          <SideBarMenu
-            handleActiveMenuChange={handleActiveMenuChange}
-            menuToRender={activeMenu}
-          />
-        )}
-      </Container>
-      {activeMenu !== 'shop' && (
-        <div className={styles.bottomNav}>
-          <Container>
-            {!isLoggedIn ? (
-              <>
-                <button
-                  onClick={() => handleActiveMenuChange('login')}
-                  className={styles.logInBtn}
-                >
-                  <p>LogIn</p>
-                  <CiLogin />
-                </button>
-              </>
-            ) : (
-              <>
-                <Link className={styles.mobileAccLink}>
-                  <VscAccount />
-                  <p>MY ACCOUNT</p>
-                </Link>
-              </>
-            )}
-            <SocialLinks isVertical={false} />
-          </Container>
-        </div>
-      )}
+      <div className={styles.bottomNav}>
+        <Container>
+          {!isLoggedIn ? (
+            <>
+              <button
+                onClick={() => handleActiveMenuChange('login')}
+                className={styles.logInBtn}
+              >
+                <p>LogIn</p>
+                <CiLogin />
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className={styles.mobileAccLink}>
+                <VscAccount />
+                <p>MY ACCOUNT</p>
+              </Link>
+            </>
+          )}
+          <SocialLinks isVertical={false} />
+        </Container>
+      </div>
     </div>
   );
 }

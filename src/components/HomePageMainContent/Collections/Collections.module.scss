@@ -1,4 +1,4 @@
-@import '/src/scssUtils/plaseholders.scss';
+@import '/src/scssUtils/placeholders.scss';
 
 .collectionSection {
   padding: 100px 0;
@@ -65,7 +65,7 @@
 }
 
 .eGift {
-  padding: 109px 77px 40px 40px;
+  padding: 40px;
   background-color: #f5e6e0;
   & h2 {
     font-weight: 500;
@@ -94,6 +94,9 @@
   @media screen and (min-width: 1280px) {
     max-width: 48%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 .aboutCollection {

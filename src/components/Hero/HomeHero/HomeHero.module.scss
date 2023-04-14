@@ -42,14 +42,14 @@
 }
 .slide {
   position: relative;
-  background-image: url('../../img/slide_bg_mob.jpg');
+  background-image: url('../../../img/slide_bg_mob.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
 
   @media screen and (min-width: 1280px) {
-    background-image: url('../../img/slide_bg.jpg');
+    background-image: url('../../../img/slide_bg.jpg');
     justify-content: space-evenly;
     padding-top: 47px;
   }

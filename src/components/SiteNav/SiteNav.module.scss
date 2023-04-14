@@ -1,4 +1,4 @@
-@import '../../scssUtils/plaseholders.scss';
+@import '../../scssUtils/placeholders.scss';
 @import '../../scssUtils/animations.scss';
 .siteNav {
   @media screen and (min-width: 1280px) {
@@ -11,6 +11,11 @@
     margin-bottom: 25px;
     &:last-child {
       margin-bottom: 0;
+    }
+    &:hover div {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
   }
 

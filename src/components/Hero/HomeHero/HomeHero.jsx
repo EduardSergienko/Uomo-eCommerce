@@ -12,11 +12,11 @@ import 'swiper/css';
 import 'swiper/scss/pagination';
 
 import { Link } from 'react-router-dom';
-import styles from './Hero.module.scss';
-import SliderImg from '../../img/slide_img.jpg';
-import SliderImgMob from '../../img/slide_img_mob.jpg';
+import styles from './HomeHero.module.scss';
+import SliderImg from '../../../img/slide_img.jpg';
+import SliderImgMob from '../../../img/slide_img_mob.jpg';
 import SocialLinks from 'components/SocialLinks/SocialLinks';
-export default function Hero() {
+export default function HomeHero() {
   const desktopWidth = useMediaQuery('(min-width:1280px)');
 
   return (

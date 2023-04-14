@@ -1,4 +1,3 @@
-// import Container from 'react-bootstrap/Container';
 import Container from 'components/Container/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -11,8 +10,8 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Container style={{ maxWidth: 1440 }}>
-        <Row>
-          <Col className={styles.footerContacts} sm={3}>
+        <Row className={styles.gridRow}>
+          <Col className={styles.footerContacts} xl={3} sm={3}>
             <Link className={styles.footerLogo} to="/">
               <img src={logo} alt="logo" />
             </Link>
@@ -25,7 +24,7 @@ export default function Footer() {
             </div>
             <SocialLinks isVertical={false} />
           </Col>
-          <Col className={styles.footerNavBox} sm={2}>
+          <Col className={styles.footerNavBox} xs={5} xl={2} sm={3}>
             <h2 className={styles.footerNavTitle}>Company</h2>
             <ul className={styles.footerNavList}>
               <li>
@@ -49,7 +48,7 @@ export default function Footer() {
               </li>
             </ul>
           </Col>
-          <Col className={styles.footerNavBox} sm={2}>
+          <Col className={styles.footerNavBox} xs={5} xl={2} sm={3}>
             <h2 className={styles.footerNavTitle}>Shop</h2>
             <ul className={styles.footerNavList}>
               <li>
@@ -69,7 +68,7 @@ export default function Footer() {
               </li>
             </ul>
           </Col>
-          <Col sm={2}>
+          <Col xl={2} sm={3}>
             <h2 className={styles.footerNavTitle}>Help</h2>
             <ul className={styles.footerNavList}>
               <li>
@@ -92,7 +91,7 @@ export default function Footer() {
               </li>
             </ul>
           </Col>
-          <Col className={styles.subscribeBox} sm={3}>
+          <Col className={styles.subscribeBox} xs={12} xl={3} sm={5}>
             <h2 className={styles.footerNavTitle}>SUBSCRIBE</h2>
             <p>
               Be the first to get the latest news about trends, promotions, and

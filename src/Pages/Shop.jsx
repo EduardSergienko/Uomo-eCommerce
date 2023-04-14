@@ -1,14 +1,10 @@
+import ShopHero from 'components/Hero/ShopHero/ShopHero';
+import ShopList from 'components/ShopContent/ShopList';
 export default function Shop() {
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh',
-      }}
-    >
-      <h1>Shop</h1>
-    </div>
+    <main>
+      <ShopHero />
+      <ShopList />
+    </main>
   );
 }

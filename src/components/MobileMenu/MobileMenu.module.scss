@@ -9,9 +9,11 @@
   height: calc(100vh - 45px);
   background-color: white;
   z-index: 10;
+  max-width: 500px;
 }
 .mobileMenuForm {
   position: relative;
+  padding: 0 15px;
 }
 .mobileMenuInput {
   width: 100%;

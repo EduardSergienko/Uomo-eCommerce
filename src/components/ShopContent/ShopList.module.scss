@@ -1,0 +1,27 @@
+.shopSection {
+  padding: 50px 0;
+}
+
+.mainShopList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 27px;
+}
+
+.itemInfoWrap {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.itemName {
+  color: var(--main-text-color);
+  font-size: 16px;
+  line-height: 23px;
+}
+.itemPrice {
+  color: var(--main-text-color);
+  font-size: 16px;
+  line-height: 23px;
+}
